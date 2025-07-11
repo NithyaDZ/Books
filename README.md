@@ -64,3 +64,8 @@ CRUD application for managing a collection of  Books
 # Assumptions
 - ISBN must be unique.
 - @NotBlank validation used for title and author.
+
+
+## Database
+-url : jdbc:h2:mem:bookdb
+-user : root
