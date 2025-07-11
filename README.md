@@ -67,5 +67,5 @@ CRUD application for managing a collection of  Books
 
 
 ## Database
--url : jdbc:h2:mem:bookdb
--user : root
+- url : jdbc:h2:mem:bookdb
+- user : root
