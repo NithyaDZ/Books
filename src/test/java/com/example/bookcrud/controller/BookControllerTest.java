@@ -59,7 +59,7 @@ class BookControllerTest {
 
     @Test
     void testGetBookById() throws Exception {
-        // ✅ Fix: Return Optional<Book> here
+        // Return Optional
         when(bookService.getBookById(1L)).thenReturn(Optional.of(book));
 
         mockMvc.perform(get("/api/books/1"))
