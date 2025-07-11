@@ -11,4 +11,6 @@ public interface BookService {
     Optional<Book> getBookById(Long id);
     Book updateBook(Long id, Book book);
     void deleteBook(Long id);
+    List<Book> searchBooks(String keyword);
+
 }

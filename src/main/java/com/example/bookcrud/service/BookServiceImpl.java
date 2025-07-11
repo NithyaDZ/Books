@@ -18,6 +18,11 @@ public class BookServiceImpl implements BookService {
     public Book createBook(Book book) {
         return bookRepository.save(book);
     }
+    @Override
+    public List<Book> searchBooks(String keyword) {
+        return bookRepository.findByTitleContainingIgnoreCaseOrAuthorContainingIgnoreCase(keyword, keyword);
+    }
+
 
     @Override
     public List<Book> getAllBooks() {

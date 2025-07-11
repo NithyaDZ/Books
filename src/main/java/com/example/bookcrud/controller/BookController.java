@@ -57,4 +57,15 @@ public class BookController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    @GetMapping("/search")
+    public ResponseEntity<List<Book>> searchBooks(@RequestParam("q") String keyword) {
+        if (keyword == null || keyword.trim().isEmpty()) {
+            return ResponseEntity.badRequest().build();
+        }
+        List<Book> results = bookService.searchBooks(keyword);
+        return ResponseEntity.ok(results);
+    }
+
 }
+
